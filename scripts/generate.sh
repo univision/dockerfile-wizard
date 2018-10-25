@@ -23,7 +23,9 @@ if [ ! -e $NODE_VERSION_NUM ] ; then
     make -j4 && \
     make install && \
     cd .. && \
-    rm -r node-v$NODE_VERSION_NUM"
+    rm -r node-v$NODE_VERSION_NUM && \
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list"
 fi
 
 if [ ! -e $PYTHON_VERSION_NUM ] ; then
