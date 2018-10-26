@@ -4,7 +4,7 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: MrLinter
+  IMAGE_NAME: mrlinter
 
   IMAGE_TAG: gp3
 
