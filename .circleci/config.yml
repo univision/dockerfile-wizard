@@ -4,9 +4,9 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: mrlinter
+  IMAGE_NAME: fe-webapp
 
-  IMAGE_TAG: gp3
+  IMAGE_TAG: 1
 
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
@@ -15,13 +15,13 @@ image_config: &image_config
 
   LINUX_VERSION: DEBIAN_JESSIE
 
-  # RUBY_VERSION_NUM: # pick a version from https://cache.ruby-lang.org/pub/ruby
+  # # RUBY_VERSION_NUM: # pick a version from https://cache.ruby-lang.org/pub/ruby
 
   NODE_VERSION_NUM: 9.11.2
 
   YARN: true
 
-  # PYTHON_VERSION_NUM: # pick a version from https://python.org/ftp/python
+  # # PYTHON_VERSION_NUM: # pick a version from https://python.org/ftp/python
 
   JAVA: false
 
@@ -29,7 +29,7 @@ image_config: &image_config
 
   POSTGRES_CLIENT: false
 
-  DOCKERIZE: false
+  DOCKERIZE: true
 
   BROWSERS: false
 
@@ -65,8 +65,8 @@ jobs:
 
       - run:
           name: start Xvfb for phantomjs test
-          # command: Xvfb :99
-          # background: true
+          # # command: Xvfb :99
+          # # background: true
 
       - run:
           name: bats tests
